@@ -1,0 +1,34 @@
+*{margin:0; padding:0;box-sizing: border-box;font-family:'Microsoft YaHei'}
+li{list-style:none;}
+a,button{cursor:pointer;}
+a,a:hover{text-decoration:none; outline:none;}
+a:focus{outline:none;}
+body,html{
+    height:100%;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.el-menu-item-group div {
+    padding: 0 0 0 0;
+}
+
+.el-submenu__title {
+    width: 200px;
+}
+
+.el-icon-arrow-down:before {
+    visibility: hidden;
+}
+
+.el-table td {
+    border: 1px solid #EBEEF5;
+}
+.page-enter-active,.page-leave-active{
+    transition:.3s;
+}
+.page-enter, .page-leave {
+    opacity:0;transform:translateY(6px);
+}
