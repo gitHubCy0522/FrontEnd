@@ -2,7 +2,7 @@
   <div>
     <ul class="nav">
       <img src="../../assets/logot.png" width="80" height="80">
-      <div class="divuser">{{userName}}</div>
+      <div class="divuser">{{userName}}{{$store.state.count}}</div>
       <div style="position: absolute;bottom: 20px;left: 25px">
         <router-link :to="{name: 'Login'}">退出</router-link>
       </div>
@@ -34,7 +34,8 @@ export default {
   methods: {},
   watch: {},
   components: {},
-  computed: {},
+  computed: {
+  },
 
   beforeCreate() {},
   created() {

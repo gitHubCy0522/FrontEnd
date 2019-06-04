@@ -8,7 +8,7 @@ import 'element-ui/lib/theme-chalk/index.css'
 import './assets/index.css'
 import axios from 'axios'
 import qs from 'qs'
-import store from './vuex/store.js'//实例化 store
+import store from '@/vuex/store'
 
 Vue.prototype.$axios = axios
 Vue.prototype.$qs = qs

@@ -35,7 +35,6 @@
   </div>
 </template>
 <script>
-
   export default {
     name: 'Login',
     data() {
@@ -55,20 +54,22 @@
           name:res1,
           pwd:res2,
         });
+        let This = this;
         this.$axios.post('http://127.0.0.1:8080/wangye/login',person)
           .then(function (res) {//返回成功
             let canshu = res;
             if (canshu.data !=""){
               //将用户名放入sessionStorage
               sessionStorage.setItem('userName',canshu.data.userName);
+              This.$store.dispatch('getUserName',2);
               window.location.href="/FirstPage"
             }else {
               alert("用户名或密码错误，请重新输入！")
             }
 
       })
-          .catch(function () {//返回失败
-            alert("失败!");
+          .catch(function (res) {//返回失败
+            alert(res);
           });
       },
       chongzhi(res1,res2){
@@ -80,12 +81,14 @@
     },
     watch: {},
     components: {},
-    computed: {},
+    computed: {
+    },
     beforeCreate() {
     },
     created() {
     },
     mounted() {
+
     },
     destroyed() {
     }
